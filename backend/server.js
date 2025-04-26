@@ -12,10 +12,15 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
+  origin: '*',  // Allow all origins
+  methods: ['GET', 'POST', 'OPTIONS'],  // Include OPTIONS for preflight requests
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  preflightContinue: false,
+  optionsSuccessStatus: 204
 }));
+
+// Handle OPTIONS preflight requests explicitly
+app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
