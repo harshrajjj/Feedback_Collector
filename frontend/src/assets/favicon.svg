@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="248" fill="#F3F4F6" stroke="#3B82F6" stroke-width="16"/>
+  
+  <!-- Feedback Icon - Speech Bubbles -->
+  <path d="M346 166H166C152.7 166 142 176.7 142 190V286C142 299.3 152.7 310 166 310H226L256 340L286 310H346C359.3 310 370 299.3 370 286V190C370 176.7 359.3 166 346 166Z" fill="#3B82F6"/>
+  
+  <!-- Small Speech Bubble -->
+  <path d="M316 346H226C212.7 346 202 356.7 202 370V390C202 403.3 212.7 414 226 414H256L276 434L296 414H316C329.3 414 340 403.3 340 390V370C340 356.7 329.3 346 316 346Z" fill="#60A5FA"/>
+  
+  <!-- Feedback Dots -->
+  <circle cx="196" cy="238" r="12" fill="white"/>
+  <circle cx="256" cy="238" r="12" fill="white"/>
+  <circle cx="316" cy="238" r="12" fill="white"/>
+  
+  <!-- Small Bubble Dots -->
+  <circle cx="246" cy="380" r="8" fill="white"/>
+  <circle cx="276" cy="380" r="8" fill="white"/>
+  <circle cx="306" cy="380" r="8" fill="white"/>
+</svg>
