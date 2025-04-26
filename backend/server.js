@@ -14,13 +14,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: '*',  // Allow all origins
   methods: ['GET', 'POST', 'OPTIONS'],  // Include OPTIONS for preflight requests
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  preflightContinue: false,
-  optionsSuccessStatus: 204
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
-
-// Handle OPTIONS preflight requests explicitly
-app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -29,12 +24,12 @@ connectDB();
 
 
 // API Routes
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.json({ status: 'Server is running' });
 });
 
 // Use routes
-app.use(feedbackRoutes);
+app.use('/', feedbackRoutes);
 
 // Error handling middleware
 app.use(notFound);
